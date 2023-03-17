@@ -26,7 +26,7 @@ stages:
         mavenPomFile: 'pom.xml'
         goals: 'package'
         javaHomeOption: 'JDKVersion'
-        mavenVersionOption: 'Default'
+        mavenVersionOption: 'JDK8'
         mavenAuthenticateFeed: false
         effectivePomSkip: false
         sonarQubeRunAnalysis: false
