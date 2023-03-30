@@ -38,5 +38,5 @@ stages:
         Contents: '**/target/*.war'
         TargetFolder: $(Build.ArtifactStagingDirectory)
 
-    - upload: $(Build.ArtifactStagingDirectory)
+    - publish: $(Build.ArtifactStagingDirectory)
       artifact: drop
