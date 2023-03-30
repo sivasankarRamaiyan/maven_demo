@@ -24,13 +24,13 @@ stages:
     - task: Maven@3
       inputs:
         mavenPomFile: 'pom.xml'
-        goals: 'package'
+        mavenOptions: '-Xmx3072m'
         javaHomeOption: 'JDKVersion'
-        mavenVersionOption: 'JDK 8'
-        mavenAuthenticateFeed: false
-        effectivePomSkip: false
-        sonarQubeRunAnalysis: false
-
+        jdkVersionOption: '1.8'
+        jdkArchitectureOption: 'x64'
+        publishJUnitResults: true
+        testResultsFiles: '**/surefire-reports/TEST-*.xml'
+        goals: 'package'
     - task: CopyFiles@2
       displayName: 'Copy Files to artifact staging directory'
       inputs:
